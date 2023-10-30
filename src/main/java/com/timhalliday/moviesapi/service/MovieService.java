@@ -45,5 +45,9 @@ public class MovieService {
 		movieRepository.delete(movie);
 		return movie;
 	}
+
+	public List<Movie> getMoviesByName(String movieName) {
+		return movieRepository.getMoviesByName(movieName);
+	}
 	
 }

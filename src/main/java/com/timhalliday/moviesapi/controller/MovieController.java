@@ -56,6 +56,10 @@ public class MovieController {
 		return new ResponseEntity<>(deletedMovie, HttpStatus.OK);
 	}
 	
-	// get movie by using a raw SQL statement
+	// get movie by name using a raw SQL statement
+	@GetMapping("/movies-by-name")
+	public List<Movie> getMoviesByName(@RequestParam(name="movieName") String movieName){
+		return movieService.getMoviesByName(movieName);
+	} 
 	
 }
